@@ -33,7 +33,7 @@
     <section class="container">
     <p class="lead">Rellena los datos y uno de nuestros asesores te contestará por correo.</p>
 
-    <form id="adviceForm" method="post" enctype="multipart/form-data" novalidate>
+    <form id="contactForm" enctype="multipart/form-data">
 
       <div class="field">
         <label for="nombre">Nombre completo *</label>
@@ -137,6 +137,7 @@
         <button type="submit" class="btn-primary">Enviar</button>
         <button type="button" id="resetBtn" class="btn-secondary">Limpiar</button>
       </div>
+      <div id="formMessage" class="oculto"></div>
       </section>
     </form>
   </main>
@@ -152,5 +153,19 @@
   </footer>
 
 </body>
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // evita recarga
+
+    // limpiar formulario
+    this.reset();
+
+    // mostrar mensaje
+    const msg = document.getElementById("formMessage");
+    msg.textContent = "Te contactaremos lo antes posible, gracias por contactar con All4Sport.";
+    msg.classList.remove("oculto");
+    msg.classList.add("visible");
+  });
+   </script>
 </html>
 
