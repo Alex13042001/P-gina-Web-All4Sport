@@ -4,16 +4,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Formulario - All4Sport</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/estilo.css"/>
 </head>
 <body>
-  <header>
-    <div class="container">
+ <header>
+    <div class="container header-inner">
       <h1 class="logo">All4Sport</h1>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="futbol.html">Fútbol</a>
+        <a href="baloncesto.html">Baloncesto</a>
+        <a href="running.html">Running</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="blog.html">Blog</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <img src="img/personas_corriendo.png" alt="Personas corriendo" />
+        <div class="hero-text">
+          <h2>Tienda deportiva online</h2>
+          <p>Encuentra lo que necesitas para tu deporte favorito.</p>
+          <a class="btn primary" href="futbol.html">Ver productos</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container">
     <h2>¿No sabes qué producto elegir? Te ayudamos</h2>
     <p class="lead">Rellena los datos y uno de nuestros asesores te contestará por correo.</p>
 
@@ -129,11 +149,18 @@
         <button type="submit" class="btn-primary">Enviar</button>
         <button type="button" id="resetBtn" class="btn-secondary">Limpiar</button>
       </div>
+      </section>
     </form>
   </main>
 
   <footer>
-    <div class="container">All4Sport &copy; 2025</div>
+    <div class="container">
+      <nav>
+        <a href="sobre_nosotros.html">Sobre nosotros</a> |
+        <a href="formulario.html">Formulario</a>
+      </nav>
+      <p>&copy; 2025 All4Sport</p>
+    </div>
   </footer>
 
 </body>
